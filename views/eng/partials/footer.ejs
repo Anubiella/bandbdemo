@@ -1,0 +1,65 @@
+<footer class="footer">
+<h1 class="footer__logo">
+    <img src="../../img/logo-color.svg" alt="Footer logo">
+</h1>
+<div class="footer__social">
+    <a href="#" class="footer__social__link header5" target="_blank">Facebook</a>
+    <a href="#" class="footer__social__link header5" target="_blank">Twitter</a>
+    <a href="#" class="footer__social__link header5" target="_blank">Instagram</a>
+    <a href="#" class="footer__social__link header5" target="_blank">Pinterest</a>
+</div>
+
+<p class="header5 footer__text">Ridolfi Residence</p>
+<p class="header6 footer__text">
+    <a href="https://www.google.com/maps/place/Via+Marechiaro,+117,+80123+Napoli+NA/@40.7962979,14.191845,17z/data=!4m5!3m4!1s0x133b0bff58332e73:0x73afffcad651caeb!8m2!3d40.7962248!4d14.1932719" target="_blank">
+        <i class="fas fa-map-marker"></i> Via Marechiaro 117 - Napoli (NA)</p>
+    </a> 
+<p class="header6 footer__text">
+    <a href="tel:081 33 44 55" target="_blank">
+        <i class="fas fa-phone"></i> 081 33 44 55
+    </a>   
+    <a href="tel:081 33 44 56" target="_blank">
+        <i class="fas fa-fax"></i> 081 33 44 56
+    </a> 
+</p>
+<p class="header6 footer__text">
+    <a href="mailto:info@rifoldires.it">
+        <i class="fas fa-envelope"></i> info@rifoldires.it
+    </a>
+</p>
+</footer>
+
+<script> 
+window.onload = function() {checkBar()};
+window.onscroll = function() {scrollFunction()};
+window.onresize = function() {checkBar()}; 
+
+var activePage = "<%= activePage %>";
+var navLogo = document.getElementById("navLogo");
+var navBar = document.getElementById("navBar");
+
+function checkBar() {
+    if (window.innerWidth < 1000 || activePage!=="home") {
+        navLogo.src = "../../img/logo-color.svg";
+        navBar.classList.add("nav__sticky");
+    }
+}
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 || window.innerWidth < 1000 || activePage !== "home") {
+        navLogo.src = "../../img/logo-color.svg";
+        navBar.classList.add("nav__sticky");
+    } else {
+        navLogo.src = "../../img/logo.svg";
+        navBar.classList.remove("nav__sticky");
+    }
+}
+function toggleMenu() {
+    document.getElementById("nav__icon").classList.toggle("nav__icon-close");
+    document.getElementById("nav__mobile").classList.toggle("nav__mobile__show");
+}
+</script>
+<!-- <script>
+    function checkBar(){window.innerWidth<1e3&&(navLogo.src="img/logo-color.svg",navBar.classList.add("nav__sticky"))}function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20||window.innerWidth<1e3?(navLogo.src="img/logo-color.svg",navBar.classList.add("nav__sticky")):(navLogo.src="img/logo.svg",navBar.classList.remove("nav__sticky"))}function toggleMenu(){document.getElementById("nav__icon").classList.toggle("nav__icon-close"),document.getElementById("nav__mobile").classList.toggle("nav__mobile__show")}window.onload=function(){checkBar()},window.onscroll=function(){scrollFunction()},window.onresize=function(){checkBar()}
+var navLogo=document.getElementById("navLogo"),navBar=document.getElementById("navBar")
+</script> -->
+</body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:600i|Lato:300,400" rel="stylesheet">
+
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script> 
+        window.Flickity||(document.write(unescape('%3Cscript src="/vendors/flickity.pkgd.min.js"%3E%3C/script%3E')),document.write(unescape('%3Clink rel="stylesheet" href="/vendors/flickity.min.css"%3E%3C/link%3E')))
+        </script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <title>B&amp;B Demo - Rooms rental website</title>
+    </head>
+    <body>
+        <header class="nav__wrapper" id="navBar">
+            <nav class="nav__nav container">
+                <a href="/eng/index" class="nav__logo">
+                    <img src="../../img/logo.svg" alt="Logo img" id="navLogo">
+                </a>
+                <div class="nav__button" onclick="toggleMenu()">
+                    <span class="nav__icon" id="nav__icon">&nbsp;</span>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/eng/index" class="nav__link header5 <%= activePage == "home" ? "nav__active" : "" %>">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/eng/residence" class="nav__link header5 <%= activePage == "residence" ? "nav__active" : "" %>">
+                            residence
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/eng/rooms" class="nav__link header5 <%= activePage == "rooms" ? "nav__active" : "" %>">
+                            rooms
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/eng/surroundings" class="nav__link header5 <%= activePage == "surroundings" ? "nav__active" : "" %>">
+                            surroundings
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/eng/contacts" class="nav__link header5 <%= activePage == "contacts" ? "nav__active" : "" %>">
+                            contacts
+                        </a>
+                    </li>
+                </ul>
+                <ul id="nav__mobile" class="nav__mobile">
+                    <li class="nav__mobile__item">
+                        <a href="/eng/index" class="nav__mobile__link header5 <%= activePage == "home" ? "nav__active" : "" %>">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__mobile__item">
+                        <a href="/eng/residence" class="nav__mobile__link header5 <%= activePage == "residence" ? "nav__active" : "" %>">
+                            Residence
+                        </a>
+                    </li>  
+                    <li class="nav__mobile__item">
+                        <a href="/eng/rooms" class="nav__mobile__link header5 <%= activePage == "rooms" ? "nav__active" : "" %>">
+                            Rooms
+                        </a>
+                    </li>   
+                    <li class="nav__mobile__item">
+                        <a href="/eng/surroundings" class="nav__mobile__link header5 <%= activePage == "surroundings" ? "nav__active" : "" %>">
+                            Surroundings
+                        </a>
+                    </li>  
+                    <li class="nav__mobile__item">
+                        <a href="/eng/contacts" class="nav__mobile__link header5 <%= activePage == "contacts" ? "nav__active" : "" %>">
+                            Contacts
+                        </a>
+                    </li>             
+                </ul>
+            </nav>
+        </header>

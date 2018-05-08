@@ -1,0 +1,29 @@
+{
+  "name": "bandbdemo",
+  "version": "1.0.0",
+  "description": "A simple B&B website demo",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "local-dev": "npm-run-all --parallel devserver watch:sass",
+    "start": "node app.js",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Lorenzo Furno",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  },
+  "dependencies": {
+    "compression": "^1.7.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
