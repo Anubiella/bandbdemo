@@ -11,6 +11,13 @@
         <script> 
         window.Flickity||(document.write(unescape('%3Cscript src="/vendors/flickity.pkgd.min.js"%3E%3C/script%3E')),document.write(unescape('%3Clink rel="stylesheet" href="/vendors/flickity.min.css"%3E%3C/link%3E')))
         </script>
+        <script>
+            document.documentElement.className += " js-loading";
+            window.addEventListener("load", showPage);
+            function showPage() {
+                document.documentElement.className = document.documentElement.className.replace("js-loading","");
+            }
+        </script>
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
         <link rel="stylesheet" href="/style.css">

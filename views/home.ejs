@@ -3,6 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            document.documentElement.className += " js-loading";
+            window.addEventListener("load", showPage);
+            function showPage() {
+                document.documentElement.className = document.documentElement.className.replace("js-loading","");
+            }
+        </script>
         
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:600i|Lato:300,400" rel="stylesheet">
 
