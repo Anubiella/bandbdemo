@@ -29,37 +29,37 @@
 </p>
 </footer>
 
-<script> 
-window.onload = function() {checkBar()};
-window.onscroll = function() {scrollFunction()};
-window.onresize = function() {checkBar()}; 
+// <script> 
+// window.onload = function() {checkBar()};
+// window.onscroll = function() {scrollFunction()};
+// window.onresize = function() {checkBar()}; 
 
-var activePage = "<%= activePage %>";
-var navLogo = document.getElementById("navLogo");
-var navBar = document.getElementById("navBar");
+// var activePage = "<%= activePage %>";
+// var navLogo = document.getElementById("navLogo");
+// var navBar = document.getElementById("navBar");
 
-function checkBar() {
-    if (window.innerWidth < 1000 || activePage!=="home") {
-        navLogo.src = "../../img/logo-color.svg";
-        navBar.classList.add("nav__sticky");
-    }
-}
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 || window.innerWidth < 1000 || activePage !== "home") {
-        navLogo.src = "../../img/logo-color.svg";
-        navBar.classList.add("nav__sticky");
-    } else {
-        navLogo.src = "../../img/logo.svg";
-        navBar.classList.remove("nav__sticky");
-    }
-}
-function toggleMenu() {
-    document.getElementById("nav__icon").classList.toggle("nav__icon-close");
-    document.getElementById("nav__mobile").classList.toggle("nav__mobile__show");
-}
+// function checkBar() {
+//     if (window.innerWidth < 1000 || activePage!=="home") {
+//         navLogo.src = "../../img/logo-color.svg";
+//         navBar.classList.add("nav__sticky");
+//     }
+// }
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 || window.innerWidth < 1000 || activePage !== "home") {
+//         navLogo.src = "../../img/logo-color.svg";
+//         navBar.classList.add("nav__sticky");
+//     } else {
+//         navLogo.src = "../../img/logo.svg";
+//         navBar.classList.remove("nav__sticky");
+//     }
+// }
+// function toggleMenu() {
+//     document.getElementById("nav__icon").classList.toggle("nav__icon-close");
+//     document.getElementById("nav__mobile").classList.toggle("nav__mobile__show");
+// }
+// </script>
+<script>
+    function checkBar(){(window.innerWidth<1e3||"home"!==activePage)&&(navLogo.src="../../img/logo-color.svg",navBar.classList.add("nav__sticky"))}function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20||window.innerWidth<1e3||"home"!==activePage?(navLogo.src="../../img/logo-color.svg",navBar.classList.add("nav__sticky")):(navLogo.src="../../img/logo.svg",navBar.classList.remove("nav__sticky"))}function toggleMenu(){document.getElementById("nav__icon").classList.toggle("nav__icon-close"),document.getElementById("nav__mobile").classList.toggle("nav__mobile__show")}window.onload=function(){checkBar()},window.onscroll=function(){scrollFunction()},window.onresize=function(){checkBar()}
+    var activePage="<%= activePage %>",navLogo=document.getElementById("navLogo"),navBar=document.getElementById("navBar")
 </script>
-<!-- <script>
-    function checkBar(){window.innerWidth<1e3&&(navLogo.src="img/logo-color.svg",navBar.classList.add("nav__sticky"))}function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20||window.innerWidth<1e3?(navLogo.src="img/logo-color.svg",navBar.classList.add("nav__sticky")):(navLogo.src="img/logo.svg",navBar.classList.remove("nav__sticky"))}function toggleMenu(){document.getElementById("nav__icon").classList.toggle("nav__icon-close"),document.getElementById("nav__mobile").classList.toggle("nav__mobile__show")}window.onload=function(){checkBar()},window.onscroll=function(){scrollFunction()},window.onresize=function(){checkBar()}
-var navLogo=document.getElementById("navLogo"),navBar=document.getElementById("navBar")
-</script> -->
 </body>
