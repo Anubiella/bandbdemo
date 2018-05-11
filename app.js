@@ -9,51 +9,48 @@ app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
 
 
-let activePage = "";
-
-
 app.get('/', (req, res) => {
     res.render('home');
 });
 
 app.get('/eng/index', (req, res) => {
-    res.render('eng/index', {activePage: "home"});
+    res.render('eng/index');
 });
 
 app.get('/eng/residence', (req, res) => {
-    res.render('eng/residence', {activePage: "residence"});
+    res.render('eng/residence');
 });
 
 app.get('/eng/rooms', (req, res) => {
-    res.render('eng/rooms', {activePage: "rooms"});
+    res.render('eng/rooms');
 });
 
 app.get('/eng/contacts', (req, res) => {
-    res.render('eng/contacts', {activePage: "contacts"});
+    res.render('eng/contacts');
 });
 
 app.get('/eng/surroundings', (req, res) => {
-    res.render('eng/surroundings', {activePage: "surroundings"});
+    res.render('eng/surroundings');
 });
 
 app.get('/ita/index', (req, res) => {
-    res.render('ita/index', {activePage: "home"});
+    res.render('ita/index');
 });
 
 app.get('/ita/residence', (req, res) => {
-    res.render('ita/residence', {activePage: "residence"});
+    res.render('ita/residence');
 });
 
 app.get('/ita/rooms', (req, res) => {
-    res.render('ita/rooms', {activePage: "rooms"});
+    res.render('ita/rooms');
 });
 
 app.get('/ita/contacts', (req, res) => {
-    res.render('ita/contacts', {activePage: "contacts"});
+    res.render('ita/contacts');
 });
 
 app.get('/ita/surroundings', (req, res) => {
-    res.render('ita/surroundings', {activePage: "surroundings"});
+    res.render('ita/surroundings');
 });
 
 app.get('*', (req, res)=>{
